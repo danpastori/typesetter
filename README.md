@@ -2,9 +2,9 @@
     <img src=".github/assets/logo.png">
 </p>
 <p align="center">
-    ![License](https://img.shields.io/github/license/typesetterio/typesetter?labelColor=5a94bd&color=00345c)
-    ![Packagist Downloads](https://img.shields.io/packagist/dm/typesetterio/typesetter?labelColor=5a94bd&color=00345c)
-    ![Github Workflow Status](https://img.shields.io/github/actions/workflow/status/typesetterio/typesetter/ci.yml?labelColor=5a94bd&color=00345c)
+    <img src="https://img.shields.io/github/license/typesetterio/typesetter?labelColor=5a94bd&color=292524" alt="License">
+    <img src="https://img.shields.io/packagist/dm/typesetterio/typesetter?labelColor=5a94bd&color=292524" alt="Packagist">
+    <img src="https://img.shields.io/github/actions/workflow/status/typesetterio/typesetter/ci.yml?labelColor=5a94bd&color=292524" alt="GitHub Workflow Status">
 </p>
 
 # Typesetter
