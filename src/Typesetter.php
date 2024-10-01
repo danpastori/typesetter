@@ -20,7 +20,7 @@ class Typesetter
 
     public function listen(string $eventClass, callable $listener): void
     {
-        $implementations = class_implements($eventClass);
+        $implementations = @class_implements($eventClass);
         if ($implementations === false) {
             throw new ListenerInvalidException($eventClass . ' has failed to generate an implementation array.');
         }
