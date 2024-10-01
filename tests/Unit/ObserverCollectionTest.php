@@ -5,6 +5,7 @@ declare(strict_types=1);
 namespace Tests\Unit;
 
 use League\CommonMark\Environment\Environment;
+use League\CommonMark\Output\RenderedContent;
 use Tests\TestCase;
 use Typesetterio\Typesetter\Contracts\Chapter;
 use Typesetterio\Typesetter\ObserverCollection;
@@ -90,7 +91,7 @@ class ObserverCollectionTest extends TestCase
         };
 
         $collection = new ObserverCollection([$ob1, $ob2, $ob3]);
-        $collection->parsed(new \Typesetterio\Typesetter\Chapter('', 1, 1));
+        $collection->parsed(new \Typesetterio\Typesetter\Chapter($this->createMock(RenderedContent::class), 1, 1));
         self::assertTrue($ob1->loaded);
         self::assertTrue($ob2->loaded);
         self::assertTrue($ob3->loaded);

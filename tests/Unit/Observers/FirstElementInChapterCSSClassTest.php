@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace Tests\Unit\Observers;
 
+use League\CommonMark\Output\RenderedContent;
 use Tests\TestCase;
 use Typesetterio\Typesetter\Chapter;
 use Typesetterio\Typesetter\Observers\FirstElementInChapterCSSClass;
@@ -12,7 +13,7 @@ class FirstElementInChapterCSSClassTest extends TestCase
 {
     public function testNothingHappensWhenFirstChapterByDefault(): void
     {
-        $chapter = new Chapter('', 1, 2);
+        $chapter = new Chapter($this->createMock(RenderedContent::class), 1, 2);
         $chapter->setHtml('<p>one</p><p>two</p>');
 
         $observer = new FirstElementInChapterCSSClass();
@@ -23,7 +24,7 @@ class FirstElementInChapterCSSClassTest extends TestCase
 
     public function testClassAddedToFirstWhenSaid(): void
     {
-        $chapter = new Chapter('', 1, 2);
+        $chapter = new Chapter($this->createMock(RenderedContent::class), 1, 2);
         $chapter->setHtml('<p>one</p><p>two</p>');
 
         $observer = new FirstElementInChapterCSSClass(skipFirst: false);
@@ -34,7 +35,7 @@ class FirstElementInChapterCSSClassTest extends TestCase
 
     public function testClassIsMerged(): void
     {
-        $chapter = new Chapter('', 2, 2);
+        $chapter = new Chapter($this->createMock(RenderedContent::class), 2, 2);
         $chapter->setHtml('<p class="already-here">one</p><p>two</p>');
 
         $observer = new FirstElementInChapterCSSClass();
@@ -45,7 +46,7 @@ class FirstElementInChapterCSSClassTest extends TestCase
 
     public function testClassChangedRenders(): void
     {
-        $chapter = new Chapter('', 2, 2);
+        $chapter = new Chapter($this->createMock(RenderedContent::class), 2, 2);
         $chapter->setHtml('<p>one</p><p>two</p>');
 
         $observer = new FirstElementInChapterCSSClass(class: 'special');

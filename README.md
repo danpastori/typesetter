@@ -1,10 +1,11 @@
 <p align="center">
-    <img src="https://github.com/TypesetterIO/assets/blob/main/logos/v1/logo.png" height="100">
+    <img src=".github/assets/logo.png">
 </p>
-
-![License](https://img.shields.io/github/license/typesetterio/typesetter?labelColor=5a94bd&color=00345c)
-![Packagist Downloads](https://img.shields.io/packagist/dm/typesetterio/typesetter?labelColor=5a94bd&color=00345c)
-![Github Workflow Status](https://img.shields.io/github/actions/workflow/status/typesetterio/typesetter/ci.yml?labelColor=5a94bd&color=00345c)
+<p align="center">
+    ![License](https://img.shields.io/github/license/typesetterio/typesetter?labelColor=5a94bd&color=00345c)
+    ![Packagist Downloads](https://img.shields.io/packagist/dm/typesetterio/typesetter?labelColor=5a94bd&color=00345c)
+    ![Github Workflow Status](https://img.shields.io/github/actions/workflow/status/typesetterio/typesetter/ci.yml?labelColor=5a94bd&color=00345c)
+</p>
 
 # Typesetter
 
@@ -49,7 +50,7 @@ $pdfContent = $service->generate($config);
 file_put_contents('my-pdf.pdf', $pdfContent);
 ```
 
-To learn more, please check out the [documentation](https://docs.typesetter.io). This details configuration, customization, themes and cover generation, observers, listeners and more.
+To learn more, please check out the [documentation](https://typesetter.io). This details configuration, customization, themes and cover generation, observers, listeners and more.
 
 ## Credits
 

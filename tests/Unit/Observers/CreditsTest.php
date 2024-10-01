@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace Tests\Unit\Observers;
 
+use League\CommonMark\Output\RenderedContent;
 use Tests\TestCase;
 use Typesetterio\Typesetter\Chapter;
 use Typesetterio\Typesetter\Observers\Credits;
@@ -12,7 +13,7 @@ class CreditsTest extends TestCase
 {
     public function testNothingHappensWhenNotLastChapter(): void
     {
-        $chapter = new Chapter('', 1, 2);
+        $chapter = new Chapter($this->createMock(RenderedContent::class), 1, 2);
         $chapter->setHtml('<p>one</p><p>two</p>');
 
         $observer = new Credits();
@@ -23,7 +24,7 @@ class CreditsTest extends TestCase
 
     public function testCreditsAddedToLastPageDefaultClass(): void
     {
-        $chapter = new Chapter('', 2, 2);
+        $chapter = new Chapter($this->createMock(RenderedContent::class), 2, 2);
         $chapter->setHtml('<p>one</p><p>two</p>');
 
         $observer = new Credits();
@@ -37,7 +38,7 @@ class CreditsTest extends TestCase
 
     public function testCreditsAddedToLastPageSpecifiedClass(): void
     {
-        $chapter = new Chapter('', 3, 3);
+        $chapter = new Chapter($this->createMock(RenderedContent::class), 3, 3);
         $chapter->setHtml('<p>a</p><p>b</p>');
 
         $observer = new Credits(class: 'derp');

@@ -5,6 +5,8 @@
          cacheResult="false"
          colors="true"
          stopOnFailure="true"
+         displayDetailsOnTestsThatTriggerDeprecations="true"
+         displayDetailsOnTestsThatTriggerWarnings="true"
 >
     <testsuites>
         <testsuite name="Unit">

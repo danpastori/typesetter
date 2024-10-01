@@ -6,12 +6,13 @@ namespace Typesetterio\Typesetter;
 
 use League\CommonMark\Extension\FrontMatter\Output\RenderedContentWithFrontMatter;
 use League\CommonMark\Output\RenderedContent;
+use League\CommonMark\Output\RenderedContentInterface;
 
 class Chapter implements Contracts\Chapter
 {
     protected string $html;
 
-    public function __construct(protected RenderedContent $markdown, protected int $chapterNumber, protected int $totalChapters)
+    public function __construct(protected RenderedContent|RenderedContentInterface $markdown, protected int $chapterNumber, protected int $totalChapters)
     {
         $this->setHtml($markdown);
     }
