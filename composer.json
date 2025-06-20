@@ -9,7 +9,7 @@
         "ext-dom": "*",
         "ext-libxml": "*",
         "league/commonmark": "^2.4",
-        "mpdf/mpdf": "^8.1",
+        "mpdf/mpdf": "^8.2",
         "spatie/commonmark-highlighter": "^3.0",
         "illuminate/support": "^12.0",
         "illuminate/collections": "^12.0"
