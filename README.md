@@ -13,7 +13,7 @@ This is the Typesetter main service. This can be used in your own projects direc
 
 ## Install
 
-This requires PHP 8.1 or above.
+This requires PHP 8.2 or above.
 
 `composer require typesetterio/typesetter`
 
